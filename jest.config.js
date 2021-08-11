@@ -1,5 +1,7 @@
 const { withEnzyme } = require('jest-expo-enzyme');
 
+// useless comment
+
 module.exports = {
   projects: [
     addConfig(withEnzyme(require('jest-expo/android/jest-preset'))),
