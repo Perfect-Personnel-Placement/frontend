@@ -6,7 +6,9 @@ module.exports = {
   ],
   collectCoverage: true,
   collectCoverageFrom: [
-    '<rootDir>/src/**/*.{ts,tsx,js,jsx}',
+    // '<rootDir>/src/**/*.{ts,tsx,js,jsx}',
+    '<rootDir>/src/components/batches/BatchListItem/BatchListItem.test.tsx',
+    // C:\Users\Bigmo\Revature\Perfect-Personnel-Placement\frontend\src\components\Clients\__tests__\AddClient.test.js
   ],
   coveragePathIgnorePatterns: [
     '**/__tests__/**/*.[jt]s?(x)'
@@ -57,9 +59,10 @@ function addConfig(config) {
   config.setupFilesAfterEnv.push('<rootDir>/__tests__/setup.js');
   
   // comment this out if you want to test all files
-  // config.testMatch = [
-  //   '<rootDir>/src/Components/Clients/__tests__/AddDemandScreen.test.js',
-  // ];
+  config.testMatch = [
+    // '<rootDir>/src/components/Clients/__tests__/AddClient.test.js',
+    '<rootDir>/src/components/batches/BatchListItem/BatchListItem.test.tsx'
+  ];
 
   // third-party libraries that throw errors
   // see https://jestjs.io/docs/tutorial-react-native#transformignorepatterns-customization 

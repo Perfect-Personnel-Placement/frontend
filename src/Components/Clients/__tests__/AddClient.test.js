@@ -7,14 +7,14 @@ import Header from '../../Header/Header';
 let wrapper;
 let ID_input, name_input, button;
 
-jest.mock('../../Header/Header', () => {
-    return ({
-        __esModule: true,
-        default: () => {
-            return <></>
-        }
-    })
-})
+// jest.mock('../../Header/Header', () => {
+//     return ({
+//         __esModule: true,
+//         default: () => {
+//             return <></>
+//         }
+//     })
+// })
 
 const mockAddNewClient = jest.fn();
 
@@ -45,22 +45,22 @@ describe('testing AddClient', () => {
     })
 
     
-    it('displays Header', () => {
-        let header = wrapper.find(Header);
-        expect(header.length).toBeGreaterThan(0);
-    })
+    // it('displays Header', () => {
+    //     let header = wrapper.find(Header);
+    //     expect(header.length).toBeGreaterThan(0);
+    // })
 
-    it('displays textInput whose placeholder reveals to user that it modifies client ID', () => {
-        expect(ID_input.length).toBeGreaterThan(0);
-    })
+    // it('displays textInput whose placeholder reveals to user that it modifies client ID', () => {
+    //     expect(ID_input.length).toBeGreaterThan(0);
+    // })
 
-    it('displays textInput whose placeholder reveals to user that it modifies client name', () => {
-        expect(name_input.length).toBeGreaterThan(0);
-    })
+    // it('displays textInput whose placeholder reveals to user that it modifies client name', () => {
+    //     expect(name_input.length).toBeGreaterThan(0);
+    // })
 
-    it('displays pressable button for adding client', () => {
-        expect(button.length).toBeGreaterThan(0);
-    })
+    // it('displays pressable button for adding client', () => {
+    //     expect(button.length).toBeGreaterThan(0);
+    // })
 
     const id = 'id';
     const name = 'name';
