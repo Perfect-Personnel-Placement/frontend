@@ -13,6 +13,7 @@ module.exports = {
   coveragePathIgnorePatterns: [
     '**/__tests__/**/*.[jt]s?(x)'
   ],
+  coverageReporters: ["json", "lcov", "text", "clover"],
   coverageDirectory: 'coverage',
   // testResultsProcessor: 'jest-sonar-reporter',
   coverageThreshold: {
