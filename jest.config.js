@@ -14,7 +14,7 @@ module.exports = {
     '**/__tests__/**/*.[jt]s?(x)'
   ],
   coverageDirectory: 'coverage',
-  testResultsProcessor: 'jest-sonar-reporter',
+  // testResultsProcessor: 'jest-sonar-reporter',
   coverageThreshold: {
     global: {
       statements: 70,
