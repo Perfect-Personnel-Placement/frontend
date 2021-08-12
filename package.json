@@ -3,6 +3,7 @@
   "scripts": {
     "start": "expo start",
     "test": "jest",
+    "test:jest": "jest /src/ --coverage --collectCoverageFrom='./src/**' --coverageDirectory='coverage'",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",

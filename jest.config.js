@@ -51,9 +51,9 @@ function addConfig(config) {
   config.setupFilesAfterEnv.push('<rootDir>/__tests__/setup.js');
   
   // comment this out if you want to test all files
-  config.testMatch = [
-    '<rootDir>/src/Components/Clients/__tests__/AddClient.test.js',
-  ];
+  // config.testMatch = [
+  //   '<rootDir>/src/Components/Clients/__tests__/AddClient.test.js',
+  // ];
 
   // third-party libraries that throw errors
   // see https://jestjs.io/docs/tutorial-react-native#transformignorepatterns-customization 
