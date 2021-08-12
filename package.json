@@ -3,7 +3,7 @@
   "scripts": {
     "start": "expo start",
     "test": "jest",
-    "test-stupid": "jest /src/components/batches/BatchListItem/BatchListItem.test.tsx --coverage --collectCoverageFrom='./src/**' --coverageDirectory='coverage'",
+    "test-stupid": "jest /src/components/batches/BatchListItem/BatchListItem.test.tsx --coverage --collectCoverageFrom='./src/components/batches/BatchListItem/**' --coverageDirectory='coverage'",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
