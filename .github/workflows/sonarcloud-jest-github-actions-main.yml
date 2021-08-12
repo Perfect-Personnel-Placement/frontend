@@ -21,12 +21,15 @@ jobs:
       run:  npm install
     - name: Install Jest globally
       run:  sudo npm install -g jest
+    # - name: What directory does this occur in
+    #  run: ls -l
     - name: Run Tests
-      run:  npm run test 'src/components/batches/BatchListItem/BatchListItem.test.tsx'
+      # run:  npm run test 'src/components/batches/BatchListItem/BatchListItem.test.tsx'
+      run: npm run test-stupid
     - name: SonarCloud Scan
       uses: sonarsource/sonarcloud-github-action@master
-      with: 
-        projectBaseDir: "/home/runner/work/frontend/frontend"
+      # with: 
+        # projectBaseDir: "/home/runner/work/frontend/frontend"
         # workDir: 
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

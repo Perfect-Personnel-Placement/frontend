@@ -1,27 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
-import {
-  View,
-  SafeAreaView,
-  Text,
-  TouchableOpacity,
-  FlatList,
-  StyleSheet,
-} from 'react-native';
-import { Picker } from '@react-native-picker/picker';
-import { useNavigation } from '@react-navigation/native';
-import { StackNavigationProp } from '@react-navigation/stack';
-import { RootStackParamList } from '../../../types';
-import BatchStats from '../../components/batches/BatchStats';
-import BatchListItem from '../../components/batches/BatchListItem';
-import { colors, screenStyles, textStyles, buttonStyles } from '../../styles';
-import BatchesListHeader from '../../components/batches/BatchesListHeader';
-=======
 import { SafeAreaView, FlatList } from 'react-native';
 import BatchListItem from '../../Components/batches/BatchListItem';
 import { screenStyles } from '../../styles';
 import BatchesListHeader from '../../Components/batches/BatchesListHeader';
->>>>>>> d740044c7a0faa497a9670c4fdc937d96ed12838
 
 /** Mock Data - PreRedux */
 export const data = [

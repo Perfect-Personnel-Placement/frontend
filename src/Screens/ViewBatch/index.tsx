@@ -12,11 +12,7 @@ import { ProgressChart } from 'react-native-chart-kit';
 import { useNavigation } from '@react-navigation/native';
 import { RootStackParamList } from '../../types';
 import { StackNavigationProp } from '@react-navigation/stack';
-<<<<<<< HEAD
-import Header from '../../components/batches/Header';
-=======
 import Header from '../../Components/batches/Header';
->>>>>>> d740044c7a0faa497a9670c4fdc937d96ed12838
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import {
   badgesStyles,
