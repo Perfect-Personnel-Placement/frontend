@@ -2,7 +2,7 @@ import {
   createStackNavigator,
   TransitionPresets,
 } from '@react-navigation/stack';
-import { RootStackParamList } from '../../../types';
+import { RootStackParamList } from '../../types';
 import React from 'react';
 import ViewBatch from '../../Screens/ViewBatch';
 import Navigation from '..';
@@ -13,6 +13,7 @@ import AddClient from '../../Screens/AddClient';
 import CreateTrainer from '../../Screens/CreateTrainer';
 import ViewEditTrainer from '../../Screens/ViewEditTrainer';
 import ViewClient from '../../Screens/ViewClient';
+import Diagram from '../../Screens/Diagram';
 //see what happens
 //please import your screen and put in your screen in components-kai
 const Stack = createStackNavigator<RootStackParamList>();
@@ -43,6 +44,7 @@ const RootStackNavigator = () => {
       <Stack.Screen name='AddEditCurriculum' component={AddEditCurriculum} />
       <Stack.Screen name='ViewClient' component={ViewClient} />
       <Stack.Screen name='AddClient' component={AddClient} />
+      <Stack.Screen name='Diagram' component={Diagram} options={{ headerShown: true }} />
       {/* <Stack.Screen name='Clients' component={ClientScreen} />
       <Stack.Screen name='EditClient' component={EditClient} />
       <Stack.Screen name='AddClient' component={AddClient} />

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+  <file path="C:\Users\Bigmo\Revature\Perfect-Personnel-Placement\frontend\src\components\batches\BatchListItem\BatchListItem.test.tsx">
+    <testCase name="Batches should be there" duration="5527"/>
+    <testCase name="Batches should be pressable" duration="19"/>
+  </file>
+</testExecutions>

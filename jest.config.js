@@ -5,8 +5,16 @@ module.exports = {
     addConfig(withEnzyme(require('jest-expo/android/jest-preset'))),
   ],
   collectCoverage: true,
-  collectCoverageFrom: ['<rootDir>/src/**/*.{ts,tsx,js,jsx}'],
+  collectCoverageFrom: [
+    // '<rootDir>/src/**/*.{ts,tsx,js,jsx}',
+    '<rootDir>/src/components/batches/BatchListItem/BatchListItem.test.tsx',
+    // C:\Users\Bigmo\Revature\Perfect-Personnel-Placement\frontend\src\components\Clients\__tests__\AddClient.test.js
+  ],
+  coveragePathIgnorePatterns: [
+    '**/__tests__/**/*.[jt]s?(x)'
+  ],
   coverageDirectory: 'coverage',
+  testResultsProcessor: 'jest-sonar-reporter',
   coverageThreshold: {
     global: {
       statements: 70,
@@ -51,9 +59,10 @@ function addConfig(config) {
   config.setupFilesAfterEnv.push('<rootDir>/__tests__/setup.js');
   
   // comment this out if you want to test all files
-  // config.testMatch = [
-  //   '<rootDir>/src/Components/Clients/__tests__/AddClient.test.js',
-  // ];
+  config.testMatch = [
+    // '<rootDir>/src/components/Clients/__tests__/AddClient.test.js',
+    '<rootDir>/src/components/batches/BatchListItem/BatchListItem.test.tsx'
+  ];
 
   // third-party libraries that throw errors
   // see https://jestjs.io/docs/tutorial-react-native#transformignorepatterns-customization 
@@ -74,6 +83,7 @@ function addConfig(config) {
     'react-native-chart-kit',
     'react-native-calendars',
     'react-native-swipe-gestures',
+    'react-native-calendar-picker',
     'expo-font',
     'expo-asset',
     'expo-constants',

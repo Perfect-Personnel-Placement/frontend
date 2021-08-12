@@ -1,4 +1,4 @@
-import { RootTabParamList } from '../../../types';
+import { RootTabParamList } from '../../types';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Batches from '../../Screens/Batches';

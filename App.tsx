@@ -26,7 +26,7 @@ const App = () => {
   if (!fontsLoaded) {
     return (
       <SafeAreaProvider style={styles.container}>
-        <Text style={{ fontFamily: 'FuturaBold' }}>The app is loading</Text>
+        <Text>The app is loading</Text>
         <StatusBar style='auto' />
       </SafeAreaProvider>
     );

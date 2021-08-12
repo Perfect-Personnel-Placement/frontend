@@ -1,0 +1,33 @@
+on:
+  # Trigger analysis when pushing in dev-branch-cleanup or pull requests, and when creating
+  # a pull request.
+  # see https://javascript.plainenglish.io/making-sonarcloud-play-nicely-with-jest-fa271f559024
+  push:
+    branches:
+      - dev-branch-cleanup
+  pull_request:
+      types: [opened, synchronize, reopened]
+name: Main Workflow
+jobs:
+  sonarcloud:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - name: Get dev-branch-cleanup
+      run: git fetch origin dev-branch-cleanup
+    - name: Install dependencies
+      run:  npm install
+    - name: Install Jest globally
+      run:  sudo npm install -g jest
+    - name: Run Tests
+      run:  npm run test 'src/components/batches/BatchListItem/BatchListItem.test.tsx'
+    - name: SonarCloud Scan
+      uses: sonarsource/sonarcloud-github-action@master
+      with: 
+        projectBaseDir: "/home/runner/work/frontend/frontend"
+        # workDir: 
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}

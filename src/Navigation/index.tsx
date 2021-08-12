@@ -1,7 +1,7 @@
 import { enableScreens } from 'react-native-screens';
 import { DrawerContent } from './DrawerNav';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import { RootDrawerParamList } from '../../types';
+import { RootDrawerParamList } from '../types';
 import React from 'react';
 import RootTabNavigator from './RootTabNavigator';
 import Logo from '../assets/logo';
